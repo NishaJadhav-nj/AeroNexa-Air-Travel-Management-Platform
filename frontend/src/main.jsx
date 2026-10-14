@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from "react";
 import {createRoot} from "react-dom/client";
 import "./styles.css";
+import airplaneVideo from "../videos/Airplane.mp4";
 
 const API="http://localhost:8080/api";
 const USER_KEY="aeronnexa-user";
@@ -173,7 +174,23 @@ function App(){
        <h1>Travel further.<br/><em>Feel lighter.</em></h1>
        <p className="sub">Discover seamless journeys, transparent fares and a beautifully simple booking experience.</p>
      </div>
-     <div className="plane-art">✈</div>
+     <div className="plane-art">
+      <video
+      className="airplane-video"
+      src={airplaneVideo}
+      autoPlay
+      loop
+      muted
+      playsInline
+      ref={(video ) => {
+        if (video) video.playbackRate = 1.5; // Set the playback speed to 1.5x
+        
+      }} 
+      />
+      <div className="plane-overlay">✈</div>
+
+     </div>
+
    </header>
 
    <main>
