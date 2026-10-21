@@ -136,14 +136,6 @@ Content-Type: application/json
 ## Payment Integration
 The backend exposes a Razorpay order endpoint and the frontend contains the checkout integration boundary. Add your Razorpay **test** key ID and secret to environment/application configuration before enabling real test checkout.
 
-Never commit API secrets to GitHub.
 
-## GitHub
-```bash
-git init
-git add .
-git commit -m "Initial AeroNexa flight booking system"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
-```
+
+
